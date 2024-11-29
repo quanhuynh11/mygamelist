@@ -16,7 +16,7 @@ export default function ProfileWindow() {
     };
 
     return (
-        <section className="bg-gray-800/55 w-60 h-full rounded-lg p-5 ">
+        <section className="bg-gray-700 w-60 h-full rounded-lg p-5 ">
             <section className="mb-20 flex flex-col items-center justify-center">
                 <img className="w-1/2 h-auto rounded-lg mb-2" src={user.photoURL}></img>
                 <p>{user.displayName}</p>
