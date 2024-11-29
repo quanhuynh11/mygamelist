@@ -22,7 +22,6 @@ export default function ProfileWindow() {
                 <p>{user.displayName}</p>
                 <p>{user.email}</p>
                 <p className="text-xs">{user.uid}</p>
-                <p>{console.log(user)}</p>
             </section>
 
             <section className="flex justify-end">

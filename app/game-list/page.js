@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import TopHeader from "../_components/top-header";
 import { useUserAuth } from "../_utils/auth-context";
+import GameList from "../_components/game-list";
 
 export default function GameListPage() {
 
@@ -27,7 +28,7 @@ export default function GameListPage() {
                 </section>
 
                 <section>
-
+                    <GameList />
                 </section>
             </main>
         )
