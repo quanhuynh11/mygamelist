@@ -6,6 +6,7 @@ import GameCard from "./game-card";
 export default function GameList() {
 
     const [gameList, setGameList] = useState([]);
+    const [renderGames, setRenderGames] = useState(false);
 
     async function getAllGames() {
         try {
@@ -23,12 +24,15 @@ export default function GameList() {
         catch (error) {
             console.log(error);
         };
+
+        setRenderGames(true);
     };
 
     return (
         <section className="flex">
             <button className="text-white" onClick={getAllGames}>Get games</button>
-            { gameList &&
+
+            { renderGames &&
                 gameList.results.map((game) => (
                     <GameCard key={game.id} gameData={game} />
                 ))
