@@ -31,7 +31,7 @@ export default function GameList() {
 
     return (
         <section className="flex">
-            {
+            { gameList &&
                 gameList.results.map((game) => (
                     <GameCard key={game.id} gameData={game} />
                 ))
