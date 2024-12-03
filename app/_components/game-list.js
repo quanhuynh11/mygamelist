@@ -48,7 +48,6 @@ export default function GameList() {
                         <GameCard key={game.id} gameData={game} />
                     ))
                 }
-
             </section>
         </section>
     );

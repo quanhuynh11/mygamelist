@@ -37,7 +37,7 @@ export default function TopHeader() {
                 </section>
             </section>
 
-            <section className={`absolute right-0 transition-all duration-300 ${isProfileFormOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10 pointer-events-none"}`}>
+            <section className={`absolute right-0 transition-all duration-300 z-50 ${isProfileFormOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10 pointer-events-none"}`}>
                 <ProfileWindow />
             </section>
 
