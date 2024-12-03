@@ -25,11 +25,12 @@ export default function GameList() {
         catch (error) {
             console.log(error);
         };
+        
+        setRenderGames(true);
     };
 
     useEffect(() => {
         getAllGames();
-        setRenderGames(true);
     }, []);
 
     return (
