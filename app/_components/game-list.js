@@ -11,7 +11,7 @@ export default function GameList() {
 
     const [date, setDate] = useState("2024-10-11")
 
-    async function getAllGames() {
+    async function getGamesOnDate() {
         try {
             const response = await fetch(`/api/games?date=${date}`);
 
@@ -32,7 +32,7 @@ export default function GameList() {
     };
 
     useEffect(() => {
-        getAllGames();
+        getGamesOnDate();
     }, [date]);
 
     return (
@@ -45,7 +45,7 @@ export default function GameList() {
             <section className="flex flex-wrap justify-center overflow-y-auto h-[65vh] p-5 rounded-lg">
                 {renderGames &&
                     gameList.results.map((game) => (
-                        <GameCard key={game.id} gameData={game} />
+                        <GameCard key={game.id} gameData={game} isUserList={false} />
                     ))
                 }
             </section>

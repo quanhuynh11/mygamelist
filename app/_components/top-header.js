@@ -1,6 +1,5 @@
 "use client"
 
-import { useRouter } from "next/navigation";
 import { useUserAuth } from "../_utils/auth-context";
 import { useState } from "react";
 import ProfileWindow from "./small-profile-window";
@@ -11,10 +10,9 @@ export default function TopHeader() {
 
     const [isProfileFormOpen, setIsProfileFormOpen] = useState(false);
 
-    const router = useRouter();
 
     const handleHomeRouting = () => {
-        router.push('/game-list')
+        window.location.href = "/game-list";
     };
 
     return (
@@ -26,8 +24,8 @@ export default function TopHeader() {
                 </section>
 
                 <section className="flex items-center">
-                    <section>
-                        <img className="h-auto max-h-36" src="/images/my-game-list.png"></img>
+                    <section onClick={() => window.location.href = "/my-game-list"}>
+                        <img className="h-auto max-h-36 cursor-pointer" src="/images/my-game-list.png"></img>
                     </section>
                 </section>
 
