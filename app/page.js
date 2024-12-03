@@ -12,7 +12,7 @@ export default function LoginPage() {
 
   useEffect(() => {
     if(user) {
-      router.push('/game-list');
+      window.location.href = "/game-list";
     };
   }, [user]);
 
