@@ -26,7 +26,7 @@ export default function GameListPage() {
                 </section>
 
                 <section>
-                    <GameList />
+                    {/* <GameList /> */}
                 </section>
             </main>
         )
