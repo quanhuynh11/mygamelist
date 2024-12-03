@@ -1,12 +1,12 @@
-export async function GET() {
+export async function GET(request) {
     const apiKey = process.env.NEXT_PUBLIC_GIANT_BOMB_API_KEY;
-    const date = "2024-10-11";
-    const startDate = "2024-09-01";
-    const endDate = "2024-11-01";
-    const limit = 10;
+    // const date = "2024-10-11";
 
-    const url = `https://www.giantbomb.com/api/games/?api_key=${apiKey}&format=json&filter=original_release_date:${date}&limit=${limit}`;
+    const { searchParams } = new URL(request.url);
+    const date = searchParams.get("date");
 
+
+    const url = `https://www.giantbomb.com/api/games/?api_key=${apiKey}&format=json&filter=original_release_date:${date}`;
 
 
     try {

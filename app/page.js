@@ -30,7 +30,7 @@ export default function LoginPage() {
           https://www.flaticon.com/free-icon/game-controller_141416 */}
           <img className=" w-1/6 h-auto filter grayscale invert" src="/images/game-controller.png"></img>
           {/* <h1 className="text-4xl font-bold">My Game List</h1> */}
-          <img className="border-b border-white" src="/images/my_game_list.png"></img>
+          <img className="border-b border-white" src="/images/my-game-list.png"></img>
         </section>
         
         {!user &&(

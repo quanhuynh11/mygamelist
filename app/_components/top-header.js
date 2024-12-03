@@ -27,7 +27,7 @@ export default function TopHeader() {
 
                 <section className="flex items-center">
                     <section>
-                        <img className="h-auto max-h-36" src="/images/my_game_list.png"></img>
+                        <img className="h-auto max-h-36" src="/images/my-game-list.png"></img>
                     </section>
                 </section>
 

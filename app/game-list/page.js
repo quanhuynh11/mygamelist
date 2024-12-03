@@ -12,7 +12,7 @@ export default function GameListPage() {
     if (!user) {
         return (
             <main className="p-5">
-                <p>You must be signed in!</p>
+                <p className="mb-10" >You must be signed in!</p>
                 <Link className="bg-neutral-700 p-5 rounded-lg mt-5" href="/">Go to Login Screen</Link>
             </main>
         );
@@ -25,7 +25,7 @@ export default function GameListPage() {
                     <TopHeader />
                 </section>
 
-                <section>
+                <section className="flex flex-col items-center justify-center p-5">
                     <GameList />
                 </section>
             </main>
