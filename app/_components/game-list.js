@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import GameCard from "./game-card";
 
 export default function GameList() {
@@ -25,18 +25,14 @@ export default function GameList() {
         };
     };
 
-    // useEffect(() => {
-    //     getAllGames();
-    // }, []);
-
     return (
         <section className="flex">
-            {/* { gameList &&
+            <button className="text-white" onClick={getAllGames}>Get games</button>
+            { gameList &&
                 gameList.results.map((game) => (
                     <GameCard key={game.id} gameData={game} />
                 ))
-            } */}
-            <p>Hello!</p>
+            }
 
         </section>
     );
