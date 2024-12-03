@@ -9,12 +9,11 @@ export default function GameListPage() {
 
     const { user } = useUserAuth();
 
-
     if (!user) {
         return (
             <main className="p-5">
                 <p>You must be signed in!</p>
-                <Link className="bg-neutral-700 p-5 rounded-lg mt-5" onClick={() => router.push('/')}>Go to Login Screen</Link>
+                <Link className="bg-neutral-700 p-5 rounded-lg mt-5" href="/">Go to Login Screen</Link>
             </main>
         );
     };
