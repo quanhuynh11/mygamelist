@@ -25,17 +25,18 @@ export default function GameList() {
         };
     };
 
-    useEffect(() => {
-        getAllGames();
-    }, []);
+    // useEffect(() => {
+    //     getAllGames();
+    // }, []);
 
     return (
         <section className="flex">
-            { gameList &&
+            {/* { gameList &&
                 gameList.results.map((game) => (
                     <GameCard key={game.id} gameData={game} />
                 ))
-            }
+            } */}
+            <p>Hello!</p>
 
         </section>
     );
