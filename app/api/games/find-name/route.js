@@ -2,9 +2,9 @@ export async function GET(request) {
     const apiKey = process.env.NEXT_PUBLIC_GIANT_BOMB_API_KEY;
 
     const { searchParams } = new URL(request.url);
-    const date = searchParams.get("date");
+    const gameName = searchParams.get("name");
 
-    const url = `https://www.giantbomb.com/api/games/?api_key=${apiKey}&format=json&filter=original_release_date:${date}`;
+    const url = `https://www.giantbomb.com/api/games/?api_key=${apiKey}&format=json&filter=name:${gameName}`;
 
     try {
         const response = await fetch(url);
