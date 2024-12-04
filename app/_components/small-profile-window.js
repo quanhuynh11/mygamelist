@@ -25,7 +25,7 @@ export default function ProfileWindow() {
             </section>
 
             <section className="flex justify-end">
-                <button className="bg-red-700 p-4 rounded-lg" onClick={handleSignOut} >Sign Out</button>
+                <button className="bg-red-700 hover:bg-red-900 focus:bg-red-700 p-4 rounded-lg" onClick={handleSignOut} >Sign Out</button>
             </section>
         </section>
     );

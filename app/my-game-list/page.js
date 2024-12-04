@@ -13,6 +13,8 @@ export default function MyGameList() {
 
     const [gameList, setGameList] = useState([]);
     const [renderGames, setRenderGames] = useState(false);
+    const [reloadKey, setReloadKey] = useState(0);
+    
 
     const getAllUserGames = async () => {
         if(user) {
@@ -23,7 +25,7 @@ export default function MyGameList() {
 
     useEffect(() => {
         getAllUserGames();
-    }, [user])
+    }, [user, reloadKey])
 
     if (!user) {
         return (
@@ -45,8 +47,8 @@ export default function MyGameList() {
                     
                     <section className="flex flex-wrap justify-center overflow-y-auto h-[65vh] p-5 rounded-lg">
                         {renderGames &&
-                            gameList.map((game) => (
-                                <GameCard key={game.id} gameData={game} isUserList={true} />
+                            gameList.map((game, index) => (
+                                <GameCard key={index} gameData={game} isUserList={true} reloadGameList={() => setReloadKey(prevKey => prevKey + 1)} />
                             ))
                         }
                     </section>
