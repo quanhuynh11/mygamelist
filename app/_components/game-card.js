@@ -34,7 +34,7 @@ export default function GameCard({ gameData, isUserList, reloadGameList }) {
                     <p className="font-mono" >Game added to your list!</p>
                 </section>
             )}
-            
+
             <section className="bg-slate-800 p-10 text-center rounded-lg relative">
                 {!isUserList && !isButtonDisabled &&
                     <button className="bg-indigo-600 hover:bg-indigo-900 hover:border-2 w-12 h-12 rounded-lg absolute top-5 right-5" onClick={handleAddGameToList}>+</button>
@@ -42,7 +42,9 @@ export default function GameCard({ gameData, isUserList, reloadGameList }) {
                 {isUserList &&
                     <button className="bg-red-600 hover:bg-red-900 hover:border-2 w-12 h-12 rounded-lg absolute top-5 left-5" onClick={handleDeleteGame}>-</button>
                 }
-                <img className="w-80 h-80 rounded-lg block mx-auto" src={gameData.image.original_url}></img>
+                <section className="hover:bg-gray-700 rounded-lg p-4 cursor-pointer">
+                    <img className="w-80 h-80 rounded-lg block mx-auto" src={gameData.image.original_url}></img>
+                </section>
                 <p className="text-white pt-5 font-bold font-mono">{gameData.name}</p>
             </section>
         </section>

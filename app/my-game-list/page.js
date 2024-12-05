@@ -44,7 +44,7 @@ export default function MyGameList() {
                 </section>
 
                 <section className="flex flex-col items-center justify-center p-5">
-                    
+                    <h1 className="font-mono text-5xl m-10 mt-5 border-b-4">My Game List</h1>
                     <section className="flex flex-wrap justify-center overflow-y-auto h-[65vh] p-5 rounded-lg">
                         {renderGames &&
                             gameList.map((game, index) => (

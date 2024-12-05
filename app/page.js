@@ -32,9 +32,9 @@ export default function LoginPage() {
                 </section>
 
                 {!user && (
-                    <section className="flex flex-col justify-center items-center" onClick={() => handleGitHubSignIn()} >
+                    <section className="flex flex-col justify-center items-center">
                         <h2 className="text-2xl mb-5">Login</h2>
-                        <section className="bg-neutral-700 w-3/5 flex p-4 justify-center rounded-lg hover:bg-neutral-600 focus:bg-neutral-700">
+                        <section className="bg-neutral-700 w-3/5 flex p-4 justify-center rounded-lg hover:bg-neutral-600 focus:bg-neutral-700 cursor-pointer" onClick={() => handleGitHubSignIn()}>
                             <img className="w-10 h-auto mr-5 filter grayscale invert" src="/images/github-logo.png"></img>
                             <button type="button">Log in With GitHub</button>
                         </section>

@@ -17,7 +17,6 @@ export default function TopHeader() {
 
     return (
         <section>
-
             <section className="bg-gray-800 w-screen h-32 flex justify-between">
                 <section className="p-5 cursor-pointer hover:bg-gray-700/50" onClick={handleHomeRouting}>
                     <img className="w-20 h-auto filter grayscale invert" src="/images/game-controller.png"></img>
@@ -25,7 +24,7 @@ export default function TopHeader() {
 
                 <section className="flex items-center">
                     <section className="hover:bg-gray-700/50" onClick={() => window.location.href = "/my-game-list"}>
-                        <img className="h-auto max-h-28 cursor-pointer" src="/images/my-game-list.png"></img>
+                        <img className="h-auto max-h-32 cursor-pointer" src="/images/my-game-list.png"></img>
                     </section>
                 </section>
 
@@ -38,9 +37,6 @@ export default function TopHeader() {
             <section className={`absolute right-0 transition-all duration-300 z-50 ${isProfileFormOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10 pointer-events-none"}`}>
                 <ProfileWindow />
             </section>
-
-
-
         </section>
     );
 };
