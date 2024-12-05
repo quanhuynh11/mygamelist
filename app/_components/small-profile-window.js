@@ -29,7 +29,7 @@ export default function ProfileWindow() {
             </section>
             
             {/* Image is a touhou reference to cirno */}
-            <img className="w-8 h-8 absolute bottom-7 hover:bg-neutral-800 p-1 rounded-lg cursor-pointer" src="/images/easter-egg.svg" onClick={navigateAbout}></img>
+            <img className="w-8 h-8 absolute bottom-7 hover:bg-neutral-800 p-1 rounded-lg cursor-pointer" src="/images/easter-egg.png" onClick={navigateAbout}></img>
 
             <section className="flex justify-end">
                 <button className="bg-red-700 hover:bg-red-900 focus:bg-red-700 p-4 rounded-lg" onClick={handleSignOut}>Sign Out</button>
