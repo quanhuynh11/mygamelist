@@ -30,7 +30,7 @@ export default function AboutPage() {
 
                 <section className="text-center m-5 font-mono">
                     <p>This website uses React and Next.js as the framework</p>
-                    <p>It also uses Giant Bomb's API to fetch all of the games for this site</p>
+                    <p>It also uses the Giant Bomb API to fetch all of the games for this site</p>
                 </section>
 
                 <section className="text-center mt-5 font-mono">
