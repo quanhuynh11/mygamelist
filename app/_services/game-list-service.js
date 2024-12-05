@@ -18,7 +18,7 @@ export async function getItems(userId, itemListStateSetter) {
         itemListStateSetter(itemList);
     } catch (error) {
         console.log(`Error Encountered: ${error}`);
-    }
+    };
 };
 
 export async function addItem(userId, gameItem) {
@@ -33,7 +33,7 @@ export async function addItem(userId, gameItem) {
         return newItemPromise.id;
     } catch (error) {
         console.log(`Error Encountered: ${error}`);
-    }
+    };
 };
 
 export async function dbDeleteItem(userId, docID) {
@@ -42,5 +42,14 @@ export async function dbDeleteItem(userId, docID) {
         await deleteDoc(deleteItemReference);
     } catch (error) {
         console.log(`Error Encountered: ${error}`);
-    }
+    };
+};
+
+export async function updateRating(userId, docID, userRating) {
+    try {
+        const docRef = doc(db, "users", userId, "gamelist", docID);
+        await updateDoc(docRef, { personalRating: userRating });
+    } catch (error) {
+        console.log(`Error Encountered: ${error}`);
+    };
 };

@@ -30,7 +30,7 @@ export default function TopHeader() {
 
                 <section className="p-5 flex flex-col items-center hover:bg-gray-700 cursor-pointer" onClick={() => setIsProfileFormOpen((prev) => !prev)}>
                     <img className="w-14 h-auto rounded-full" src={user.photoURL} alt="profile picture" ></img>
-                    <p className="pt-1">{user.displayName}</p>
+                    <p className="pt-1 font-mono">{user.displayName}</p>
                 </section>
             </section>
 
