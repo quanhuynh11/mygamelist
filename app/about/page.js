@@ -43,9 +43,6 @@ export default function AboutPage() {
                     <p>
                         There may be more updates?!
                     </p>
-                    <p className="text-3xl mt-5">
-                        👍
-                    </p>
                 </section>
             </main>
         )
