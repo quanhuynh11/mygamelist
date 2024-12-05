@@ -40,9 +40,10 @@ export default function AboutPage() {
                     <p>
                         This project was finalized on November 04, 2024
                     </p>
-                    <p>
+                    <p className="mb-5">
                         There may be more updates?!
                     </p>
+                    <Link className="text-2xl hover:underline hover:text-indigo-500" href="https://github.com/quanhuynh11/mygamelist">GitHub Repository Link</Link>
                 </section>
             </main>
         )
